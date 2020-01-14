@@ -1,3 +1,5 @@
+// original credit for this snippet: https://github.com/brettpthomas
+
 function getLinkFromTagText(tagText) {
 var slug = tagText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
 return "<a class='sidebar-tag-link blue big-tag' href='/tags/" + slug + "'>" + tagText + "</a>";
