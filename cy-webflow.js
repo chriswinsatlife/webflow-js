@@ -15,6 +15,15 @@ var slug = productText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/
 return "<a class='sidebar-tag-link blue big-tag' href='/products/" + slug + "'>" + productText + "</a>";
 }
 
+
+function getLinkFromTacticText(tacticText) {
+var slug = tacticText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
+return "<a class='sidebar-tag-link blue big-tag' href='/products/" + slug + "'>" + tacticText + "</a>";
+}
+
+
+
+
 function getLinksHtmlFromTagsString(tagsString) {
 var linksList = tagsString.split(',').map(getLinkFromTagText);
 return linksList.join(' ');
@@ -29,6 +38,14 @@ function getLinksHtmlFromProductsString(productsString) {
 var linksList = productsString.split(',').map(getLinkFromProductText);
 return linksList.join(' ');
 }
+
+function getLinksHtmlFromTacticsString(tacticsString) {
+var linksList = tacticsString.split(',').map(getLinkFromTacticText);
+return linksList.join(' ');
+}
+
+
+
 
 function addLinksToTagsStringElement() {
     var tagsString = $(this).html();
@@ -45,6 +62,14 @@ function addLinksToProductsStringElement() {
     $(this).html(getLinksHtmlFromProductsString(productsString));
 }
 
+function addLinksToTacticsStringElement() {
+    var tacticsString = $(this).html();
+    $(this).html(getLinksHtmlFromTacticsString(tacticsString));
+}
+
+
+
 $(".tag-array").each(addLinksToTagsStringElement);
 $(".paper-array").each(addLinksToPapersStringElement);
 $(".product-array").each(addLinksToProductsStringElement);
+$(".tactic-array").each(addLinksToTacticsStringElement);
