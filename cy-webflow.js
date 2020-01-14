@@ -76,3 +76,19 @@ $(".tag-array").each(addLinksToTagsStringElement);
 $(".paper-array").each(addLinksToPapersStringElement);
 $(".product-array").each(addLinksToProductsStringElement);
 $(".tactic-array").each(addLinksToTacticsStringElement);
+
+
+// This does some other cleaning up of ugly strings
+                                    
+$(".comma-space").text(function(i, val) {
+    return val.replace(/,/g, ", ");
+});
+
+$(".comma-split").text(function(i, val) {
+    return val.split(/,/g).join(" ");
+});
+
+$(".comma-amp").text(function(i, val) {
+    return val.replace(/,/g, " & ");
+});
+
