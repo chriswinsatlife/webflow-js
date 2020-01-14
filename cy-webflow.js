@@ -1,5 +1,8 @@
 // original credit for this snippet: https://github.com/brettpthomas
 
+
+// This creates an all-lowercase, hypenated slug with no special characters for each string, and creates a link around each substring in the string separated by a comma
+
 function getLinkFromTagText(tagText) {
 var slug = tagText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
 return "<a class='sidebar-tag-link blue big-tag' href='/tags/" + slug + "'>" + tagText + "</a>";
@@ -21,7 +24,7 @@ return "<a class='sidebar-tag-link blue big-tag' href='/tactics/" + slug + "'>" 
 }
 
 
-
+// This separates the new link items into separate array items and rejoins them together, separating with a space
 
 function getLinksHtmlFromTagsString(tagsString) {
 var linksList = tagsString.split(',').map(getLinkFromTagText);
@@ -44,7 +47,7 @@ return linksList.join(' ');
 }
 
 
-
+// This wraps the link HTML around each item
 
 function addLinksToTagsStringElement() {
     var tagsString = $(this).html();
@@ -67,6 +70,7 @@ function addLinksToTacticsStringElement() {
 }
 
 
+// This does all the stuff above to any strings within divs with the classes specified in quotes
 
 $(".tag-array").each(addLinksToTagsStringElement);
 $(".paper-array").each(addLinksToPapersStringElement);
