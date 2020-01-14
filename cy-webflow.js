@@ -15,10 +15,9 @@ var slug = productText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/
 return "<a class='sidebar-tag-link blue big-tag' href='/products/" + slug + "'>" + productText + "</a>";
 }
 
-
 function getLinkFromTacticText(tacticText) {
 var slug = tacticText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
-return "<a class='sidebar-tag-link blue big-tag' href='/products/" + slug + "'>" + tacticText + "</a>";
+return "<a class='sidebar-tag-link blue big-tag' href='/tactics/" + slug + "'>" + tacticText + "</a>";
 }
 
 
