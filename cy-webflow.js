@@ -1,18 +1,16 @@
-
-
 function getLinkFromTagText(tagText) {
-var slug = tagText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
-return "<a class='sidebar-tag-link blue big-tag' href='/tag/" + slug + "'>" + tagText + "</a>";
+var slug = tagText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
+return "<a class='sidebar-tag-link blue big-tag' href='/tags/" + slug + "'>" + tagText + "</a>";
 }
 
 function getLinkFromPaperText(paperText) {
-var slug = paperText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
-return "<a class='sidebar-tag-link blue big-tag' href='/paper/" + slug + "'>" + paperText + "</a>";
+var slug = paperText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
+return "<a class='sidebar-tag-link blue big-tag' href='/papers/" + slug + "'>" + paperText + "</a>";
 }
 
 function getLinkFromProductText(productText) {
-var slug = productText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
-return "<a class='sidebar-tag-link blue big-tag' href='/product/" + slug + "'>" + productText + "</a>";
+var slug = productText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
+return "<a class='sidebar-tag-link blue big-tag' href='/products/" + slug + "'>" + productText + "</a>";
 }
 
 function getLinksHtmlFromTagsString(tagsString) {
@@ -31,20 +29,20 @@ return linksList.join(' ');
 }
 
 function addLinksToTagsStringElement() {
-    var tagsString = $(this).html();
-    $(this).html(getLinksHtmlFromTagsString(tagsString));
+    var tagsString = $(this).html();
+    $(this).html(getLinksHtmlFromTagsString(tagsString));
 }
 
 function addLinksToPapersStringElement() {
-    var papersString = $(this).html();
-    $(this).html(getLinksHtmlFromPapersString(papersString));
+    var papersString = $(this).html();
+    $(this).html(getLinksHtmlFromPapersString(papersString));
 }
 
 function addLinksToProductsStringElement() {
-    var productsString = $(this).html();
-    $(this).html(getLinksHtmlFromProductsString(productsString));
+    var productsString = $(this).html();
+    $(this).html(getLinksHtmlFromProductsString(productsString));
 }
 
 $(".tag-array").each(addLinksToTagsStringElement);
-$(".paper-array").each(addLinksToTagsStringElement);
+$(".paper-array").each(addLinksToPapersStringElement);
 $(".product-array").each(addLinksToProductsStringElement);
