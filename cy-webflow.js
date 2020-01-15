@@ -23,9 +23,12 @@ var slug = tacticText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g
 return "<a class='sidebar-tag-link blue big-tag' href='/tactics/" + slug + "'>" + tacticText + "</a>";
 }
 
+
 function besci1(besciText) {
-var slug = besciText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
-return "<span class='besci-level " + slug + "'>" + besciText + "</span>";
+var slug = besciText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
+					.replace(/ /g, "-")
+                    .toLowerCase();
+return "<span class='besci-level' class='" + slug + "'>" + besciText + "</span>";
 }
 
 // This separates the new link items into separate array items and rejoins them together, separating with a space
