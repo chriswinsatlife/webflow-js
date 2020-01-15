@@ -134,15 +134,3 @@ function step3() {
 
 $(".splitter").each(step3);
 
-// The classic conv function to slugify strings
-
-var conv = function (str) {
-    if (!str) {
-        str = 'empty';
-    }  return str.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, ' ')
-				.replace(/, /g, ",")
-				.replace(/ /g, "-")
-			    .replace(/,/g, " ")
-			    .toLowerCase()
-    			.trim();
-};
