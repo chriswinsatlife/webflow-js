@@ -1,5 +1,7 @@
 // 1) Call Mixitup
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.0/mixitup.min.js"></script>
+<script>
 
 	// 2) Reusable function to convert any string/text to css-friendly format
 	  var conv = function (str) {
@@ -67,3 +69,4 @@
 	    }
 	});
 
+</script>
