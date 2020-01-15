@@ -23,9 +23,9 @@ var slug = tacticText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g
 return "<a class='sidebar-tag-link blue big-tag' href='/tactics/" + slug + "'>" + tacticText + "</a>";
 }
 
-function besci1(bescitext) {
-var slug = bescitext.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
-return "<span class='sidebar-tag-link blue'" + bescitext + "</span>";
+function besci1(besciText) {
+var slug = besciText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
+return "<span class='sidebar-tag-link blue'" + besciText + "</span>";
 }
 
 // This separates the new link items into separate array items and rejoins them together, separating with a space
@@ -50,8 +50,8 @@ var linksList = tacticsString.split(',').map(getLinkFromTacticText);
 return linksList.join(' ');
 }
 
-function besci2(bescistring) {
-var linksList = bescistring.split(',').map(besci1);
+function besci2(besciString) {
+var linksList = besciString.split(',').map(besci1);
 return linksList.join(' ');
 }
 
@@ -79,8 +79,8 @@ function addLinksToTacticsStringElement() {
 }
 
 function besci3() {
-    var bescistring = $(this).html();
-    $(this).html(besci2(bescistring));
+    var besciString = $(this).html();
+    $(this).html(besci2(besciString));
 }
 
 
