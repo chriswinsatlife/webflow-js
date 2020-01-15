@@ -3,12 +3,12 @@
 
 // This creates an all-lowercase, hypenated slug with no special characters for each string, and creates a link around each substring in the string separated by a comma
 
-function getLinkFromTagText(tagText) {
-	var slug = tagText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
-			.replace(/ /g, "-")
-			.toLowerCase();
-	return "<a class='sidebar-tag-link blue big-tag' href='/tags/" + slug + "'>" + tagText + "</a>";
-}
+//	function getLinkFromTagText(tagText) {
+//		var slug = tagText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
+//				.replace(/ /g, "-")
+//				.toLowerCase();
+//		return "<a class='sidebar-tag-link blue big-tag' href='/tags/" + slug + "'>" + tagText + "</a>";
+//	}
 
 function getLinkFromPaperText(paperText) {
 	var slug = paperText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
@@ -41,10 +41,10 @@ function besci1(besciText) {
 
 // This separates the new link items into separate array items and rejoins them together, separating with a space
 
-function getLinksHtmlFromTagsString(tagsString) {
-	var linksList = tagsString.split(',').map(getLinkFromTagText);
-	return linksList.join(' ');
-}
+//	function getLinksHtmlFromTagsString(tagsString) {
+//		var linksList = tagsString.split(',').map(getLinkFromTagText);
+//		return linksList.join(' ');
+//	}
 
 function getLinksHtmlFromPapersString(papersString) {
 	var linksList = papersString.split(',').map(getLinkFromPaperText);
@@ -69,10 +69,10 @@ function besci2(besciString) {
 
 // This wraps the link HTML around each item
 
-function addLinksToTagsStringElement() {
-    var tagsString = $(this).html();
-    $(this).html(getLinksHtmlFromTagsString(tagsString));
-}
+//	function addLinksToTagsStringElement() {
+//	    var tagsString = $(this).html();
+//	    $(this).html(getLinksHtmlFromTagsString(tagsString));
+//	}
 
 function addLinksToPapersStringElement() {
     var papersString = $(this).html();
@@ -97,7 +97,7 @@ function besci3() {
 
 // This does all the stuff above to any strings within divs with the classes specified in quotes
 
-$(".tag-array").each(addLinksToTagsStringElement);
+//	$(".tag-array").each(addLinksToTagsStringElement);
 $(".paper-array").each(addLinksToPapersStringElement);
 $(".product-array").each(addLinksToProductsStringElement);
 $(".tactic-array").each(addLinksToTacticsStringElement);
