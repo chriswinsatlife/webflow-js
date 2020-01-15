@@ -92,3 +92,42 @@ $(".comma-amp").text(function(i, val) {
     return val.replace(/,/g, " & ");
 });
 
+
+
+// ↓ enter the string hack functions
+
+function step1(txt1) {
+	var slug = txt1.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
+	return "<span>"+ txt1 +"</span>";
+  ;
+}
+
+// This separates the new link items into separate array items and rejoins them together, separating with a space
+
+function step2(txt2) {
+var txt3 = txt2.split(',').map(step1);
+return txt3.join(', ');
+}
+
+// This wraps the link HTML around each item
+
+function step3() {
+    var txt4 = $(this).html();
+    $(this).html(step2(txt4));
+}
+
+
+$(".splitter").each(step3);
+
+// The classic conv function to slugify strings
+
+var conv = function (str) {
+    if (!str) {
+        str = 'empty';
+    }  return str.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, ' ')
+				.replace(/, /g, ",")
+				.replace(/ /g, "-")
+			    .replace(/,/g, " ")
+			    .toLowerCase()
+    			.trim();
+};
