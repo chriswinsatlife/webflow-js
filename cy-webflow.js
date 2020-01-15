@@ -112,9 +112,10 @@ $(".comma-amp").text(function(i, val) {
 // ↓ enter the string hack functions
 
 function step1(txt1) {
-	var slug = txt1.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
+	var slug = txt1.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
+  					.replace(/ /g, "-")
+  					.toLowerCase();
 	return "<span>"+ txt1 +"</span>";
-  ;
 }
 
 // This separates the new link items into separate array items and rejoins them together, separating with a space
@@ -133,4 +134,3 @@ function step3() {
 
 
 $(".splitter").each(step3);
-
