@@ -17,7 +17,7 @@ const getScript = (source, callback) => {
     prior.parentNode.insertBefore(script, prior);
 };
 
-$document.getScript('https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js')
+$.getScript('https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js', function()
 	    
 {
     // script is now loaded and executed.
