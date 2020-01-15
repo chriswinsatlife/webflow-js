@@ -97,24 +97,24 @@ function besci3() {
 
 // This does all the stuff above to any strings within divs with the classes specified in quotes
 
-//	$(".tag-array").each(addLinksToTagsStringElement);
-$(".paper-array").each(addLinksToPapersStringElement);
-$(".product-array").each(addLinksToProductsStringElement);
-$(".tactic-array").each(addLinksToTacticsStringElement);
-$(".besci-array").each(besci3);
+$document.getElementsByClassName(".tag-array").each(addLinksToTagsStringElement);
+$document.getElementsByClassName(".paper-array").each(addLinksToPapersStringElement);
+$document.getElementsByClassName(".product-array").each(addLinksToProductsStringElement);
+$document.getElementsByClassName(".tactic-array").each(addLinksToTacticsStringElement);
+$document.getElementsByClassName(".besci-array").each(besci3);
 
 
 // This does some other cleaning up of ugly strings
                                     
-$(".comma-space").text(function(i, val) {
+$document.getElementsByClassName(".comma-space").text(function(i, val) {
     return val.replace(/,/g, ", ");
 });
 
-$(".comma-split").text(function(i, val) {
+$document.getElementsByClassName(".comma-split").text(function(i, val) {
     return val.split(/,/g).join(" ");
 });
 
-$(".comma-amp").text(function(i, val) {
+$document.getElementsByClassName(".comma-amp").text(function(i, val) {
     return val.replace(/,/g, " & ");
 });
 
@@ -144,4 +144,4 @@ function step3() {
 }
 
 
-$(".splitter").each(step3);
+$document.getElementsByClassName(".splitter").each(step3);
