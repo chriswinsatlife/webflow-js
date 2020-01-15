@@ -28,7 +28,7 @@ function besci1(besciText) {
 var slug = besciText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
 			.replace(/ /g, "-")
 			.toLowerCase();
-return "<div class='besci-level' class='" + slug + "'>" + besciText + "</div>";
+return "<div class='besci-level " + slug + "'>" + besciText + "</div>";
 }
 
 // This separates the new link items into separate array items and rejoins them together, separating with a space
