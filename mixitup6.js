@@ -8,12 +8,7 @@ var imported2 = document.createElement('script');
 imported2.src = 'https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js';
 document.head.appendChild(imported2);
 
-$.getScript('https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js', function()
-
-	    
-{
-    // script is now loaded and executed.
-    // put your dependent JS here.
+$.getScript('https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js')
 
 
 	// 2) Reusable function to convert any string/text to css-friendly format
@@ -83,4 +78,3 @@ $.getScript('https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js
 	});
 
 
-});
