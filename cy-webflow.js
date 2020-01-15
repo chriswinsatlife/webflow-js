@@ -25,7 +25,7 @@ return "<a class='sidebar-tag-link blue big-tag' href='/tactics/" + slug + "'>" 
 
 function besci1(besciText) {
 var slug = besciText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
-return "<span class='sidebar-tag-link blue'" + slug + "'>" + besciText + "</span>";
+return "<span class='besci-level'" + slug + "'>" + besciText + "</span>";
 }
 
 // This separates the new link items into separate array items and rejoins them together, separating with a space
