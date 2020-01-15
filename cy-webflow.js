@@ -4,58 +4,66 @@
 // This creates an all-lowercase, hypenated slug with no special characters for each string, and creates a link around each substring in the string separated by a comma
 
 function getLinkFromTagText(tagText) {
-var slug = tagText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
-return "<a class='sidebar-tag-link blue big-tag' href='/tags/" + slug + "'>" + tagText + "</a>";
+	var slug = tagText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
+			.replace(/ /g, "-")
+			.toLowerCase();
+	return "<a class='sidebar-tag-link blue big-tag' href='/tags/" + slug + "'>" + tagText + "</a>";
 }
 
 function getLinkFromPaperText(paperText) {
-var slug = paperText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
-return "<a class='sidebar-tag-link blue big-tag' href='/papers/" + slug + "'>" + paperText + "</a>";
+	var slug = paperText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
+			.replace(/ /g, "-")
+			.toLowerCase();
+	return "<a class='sidebar-tag-link blue big-tag' href='/papers/" + slug + "'>" + paperText + "</a>";
 }
 
 function getLinkFromProductText(productText) {
-var slug = productText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
-return "<a class='sidebar-tag-link blue big-tag' href='/products/" + slug + "'>" + productText + "</a>";
+	var slug = productText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
+			.replace(/ /g, "-")
+			.toLowerCase();
+	return "<a class='sidebar-tag-link blue big-tag' href='/products/" + slug + "'>" + productText + "</a>";
 }
 
 function getLinkFromTacticText(tacticText) {
-var slug = tacticText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
-return "<a class='sidebar-tag-link blue big-tag' href='/tactics/" + slug + "'>" + tacticText + "</a>";
+	var slug = tacticText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
+			.replace(/ /g, "-")
+			.toLowerCase();
+	return "<a class='sidebar-tag-link blue big-tag' href='/tactics/" + slug + "'>" + tacticText + "</a>";
 }
 
 
 function besci1(besciText) {
-var slug = besciText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
+	var slug = besciText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
 			.replace(/ /g, "-")
 			.toLowerCase();
-return "<div class='besci-level " + slug + "'>" + besciText + "</div>";
+	return "<div class='besci-level " + slug + "'>" + besciText + "</div>";
 }
 
 // This separates the new link items into separate array items and rejoins them together, separating with a space
 
 function getLinksHtmlFromTagsString(tagsString) {
-var linksList = tagsString.split(',').map(getLinkFromTagText);
-return linksList.join(' ');
+	var linksList = tagsString.split(',').map(getLinkFromTagText);
+	return linksList.join(' ');
 }
 
 function getLinksHtmlFromPapersString(papersString) {
-var linksList = papersString.split(',').map(getLinkFromPaperText);
-return linksList.join(' ');
+	var linksList = papersString.split(',').map(getLinkFromPaperText);
+	return linksList.join(' ');
 }
 
 function getLinksHtmlFromProductsString(productsString) {
-var linksList = productsString.split(',').map(getLinkFromProductText);
-return linksList.join(' ');
+	var linksList = productsString.split(',').map(getLinkFromProductText);
+	return linksList.join(' ');
 }
 
 function getLinksHtmlFromTacticsString(tacticsString) {
-var linksList = tacticsString.split(',').map(getLinkFromTacticText);
-return linksList.join(' ');
+	var linksList = tacticsString.split(',').map(getLinkFromTacticText);
+	return linksList.join(' ');
 }
 
 function besci2(besciString) {
-var besciList = besciString.split(',').map(besci1);
-return besciList.join(' ');
+	var besciList = besciString.split(',').map(besci1);
+	return besciList.join(' ');
 }
 
 
@@ -124,15 +132,15 @@ function step1(txt1) {
 // This separates the new link items into separate array items and rejoins them together, separating with a space
 
 function step2(txt2) {
-var txt3 = txt2.split(',').map(step1);
-return txt3.join(', ');
+	var txt3 = txt2.split(',').map(step1);
+	return txt3.join(', ');
 }
 
 // This wraps the link HTML around each item
 
 function step3() {
-    var txt4 = $(this).html();
-    $(this).html(step2(txt4));
+	var txt4 = $(this).html();
+	$(this).html(step2(txt4));
 }
 
 
