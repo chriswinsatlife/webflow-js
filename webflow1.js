@@ -97,7 +97,7 @@ function besci3() {
 
 // This does all the stuff above to any strings within divs with the classes specified in quotes
 
-$".tag-array").each(addLinksToTagsStringElement);
+$(".tag-array").each(addLinksToTagsStringElement);
 $(".paper-array").each(addLinksToPapersStringElement);
 $(".product-array").each(addLinksToProductsStringElement);
 $(".tactic-array").each(addLinksToTacticsStringElement);
