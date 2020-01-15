@@ -23,6 +23,10 @@ var slug = tacticText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g
 return "<a class='sidebar-tag-link blue big-tag' href='/tactics/" + slug + "'>" + tacticText + "</a>";
 }
 
+function besci1(bescitext) {
+var slug = bescitext.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '').replace(/ /g, "-").toLowerCase();
+return "<span class='sidebar-tag-link blue'" + bescitext + "</span>";
+}
 
 // This separates the new link items into separate array items and rejoins them together, separating with a space
 
@@ -43,6 +47,11 @@ return linksList.join(' ');
 
 function getLinksHtmlFromTacticsString(tacticsString) {
 var linksList = tacticsString.split(',').map(getLinkFromTacticText);
+return linksList.join(' ');
+}
+
+function besci2(bescistring) {
+var linksList = bescistring.split(',').map(besci1);
 return linksList.join(' ');
 }
 
@@ -69,6 +78,11 @@ function addLinksToTacticsStringElement() {
     $(this).html(getLinksHtmlFromTacticsString(tacticsString));
 }
 
+function besci3() {
+    var bescistring = $(this).html();
+    $(this).html(besci2(bescistring));
+}
+
 
 // This does all the stuff above to any strings within divs with the classes specified in quotes
 
@@ -76,6 +90,7 @@ $(".tag-array").each(addLinksToTagsStringElement);
 $(".paper-array").each(addLinksToPapersStringElement);
 $(".product-array").each(addLinksToProductsStringElement);
 $(".tactic-array").each(addLinksToTacticsStringElement);
+$(".besci-array").each(besci3);
 
 
 // This does some other cleaning up of ugly strings
