@@ -106,15 +106,15 @@ $(".besci-array").each(besci3);
 
 // This does some other cleaning up of ugly strings
                                     
-$document.getElementsByClassName(".comma-space").text(function(i, val) {
+$(".comma-space").text(function(i, val) {
     return val.replace(/,/g, ", ");
 });
 
-$document.getElementsByClassName(".comma-split").text(function(i, val) {
+$(".comma-split").text(function(i, val) {
     return val.split(/,/g).join(" ");
 });
 
-$document.getElementsByClassName(".comma-amp").text(function(i, val) {
+$(".comma-amp").text(function(i, val) {
     return val.replace(/,/g, " & ");
 });
 
