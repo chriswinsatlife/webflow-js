@@ -6,7 +6,7 @@ document.head.appendChild(imported1);
 
 var imported2 = document.createElement('script');
 imported2.src = 'https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js';
-document.head.appendChild(imported)2;
+document.head.appendChild(imported2);
 
 $.getScript('https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js', function()
 
