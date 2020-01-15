@@ -11,11 +11,11 @@ $.getScript('https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js
 	    if (!str) {
 		str = 'empty';
 	    }  return str.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, ' ')
-					.replace(/, /g, ",")
-					.replace(/ /g, "-")
-				    .replace(/,/g, " ")
-				    .toLowerCase()
-				.trim();
+			.replace(/, /g, ",")
+			.replace(/ /g, "-")
+		    	.replace(/,/g, " ")
+			.toLowerCase()
+			.trim();
 	};
 
 	// 3) Creating dynamic elements classes from its categories for filtering:
@@ -60,12 +60,12 @@ $.getScript('https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js
 
 	var mixer = mixitup(containerEl, {
 	    animation: {
-			enable: false,
+		enable: false,
 		effects: 'fade',
-		      nudge: false,
+		nudge: false,
 		reverseOut: false,
-					applyPerspective: false,
-					animateResizeContainer: false,
+		applyPerspective: false,
+		animateResizeContainer: false,
 		clampHeight: false,
 		clampWidth: false,
 		duration: 200
