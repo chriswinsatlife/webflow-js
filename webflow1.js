@@ -97,11 +97,11 @@ function besci3() {
 
 // This does all the stuff above to any strings within divs with the classes specified in quotes
 
-$document.getElementsByClassName(".tag-array").each(addLinksToTagsStringElement);
-$document.getElementsByClassName(".paper-array").each(addLinksToPapersStringElement);
-$document.getElementsByClassName(".product-array").each(addLinksToProductsStringElement);
-$document.getElementsByClassName(".tactic-array").each(addLinksToTacticsStringElement);
-$document.getElementsByClassName(".besci-array").each(besci3);
+$".tag-array").each(addLinksToTagsStringElement);
+$(".paper-array").each(addLinksToPapersStringElement);
+$(".product-array").each(addLinksToProductsStringElement);
+$(".tactic-array").each(addLinksToTacticsStringElement);
+$(".besci-array").each(besci3);
 
 
 // This does some other cleaning up of ugly strings
@@ -144,4 +144,4 @@ function step3() {
 }
 
 
-$document.getElementsByClassName(".splitter").each(step3);
+$(".splitter").each(step3);
