@@ -1,6 +1,11 @@
 // 1) Call Mixitup
 
+var imported = document.createElement('script');
+imported.src = 'https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js';
+document.head.appendChild(imported);
+
 $.getScript('https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js', function()
+
 	    
 {
     // script is now loaded and executed.
