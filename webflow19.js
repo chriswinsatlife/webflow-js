@@ -37,7 +37,7 @@ function getLinkFromBehaviorText(behaviorText) {
 	var slug = behaviorText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
 			.replace(/ /g, "-")
 			.toLowerCase();
-	return "<div class='collection-item-6 w-dyn-item w-col w-col-4'><a href='/behaviors/"+slug+"' class='help-category-card product-card tactic-card w-inline-block'><div class='feature-icon-left _48'><img src='https://global-uploads.webflow.com/5df525c935688c0af50a9c57/5e16948ccb9d510239dd0ed8_tbi-mark-dark%403x.png' alt='' class='image-8'></div><div class='feature-info-right'><div class='comma-space product-name tactic-name behavior-name'>"+behaviorText+"</div></div></a></div>"
+	return "<div class='full-width collection-item-6 w-dyn-item w-col w-col-4'><a href='/behaviors/"+slug+"' class='help-category-card product-card tactic-card w-inline-block'><div class='feature-icon-left _48'><img src='https://global-uploads.webflow.com/5df525c935688c0af50a9c57/5e16948ccb9d510239dd0ed8_tbi-mark-dark%403x.png' alt='' class='image-8'></div><div class='feature-info-right'><div class='comma-space product-name tactic-name behavior-name'>"+behaviorText+"</div></div></a></div>"
 	;
 }
 
