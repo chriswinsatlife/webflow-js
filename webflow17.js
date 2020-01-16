@@ -72,7 +72,7 @@ function getLinksHtmlFromTacticsString(tacticsString) {
 	return linksList.join(' ');
 }
 
-function getLinksHtmlFromBehaviorString(behaviorsString) {
+function getLinksHtmlFromBehaviorsString(behaviorsString) {
 	var linksList = behaviorsString.split(',').map(getLinkFromBehaviorText);
 	return linksList.join(' ');
 }
