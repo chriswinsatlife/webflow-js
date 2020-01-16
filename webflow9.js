@@ -14,18 +14,7 @@ function getLinkFromPaperText(paperText) {
 	var slug = paperText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
 			.replace(/ /g, "-")
 			.toLowerCase();
-	return "<a href='/papers/"
-		+ slug +
-		"' class='help-category-card w-inline-block'>
-		<div class='_48'>
-		<img src='https://global-uploads.webflow.com/5df525c935688c0af50a9c57/5dfa8621f8d0d37b310dbb11_NoteIcon.png' alt=''>
-		</div>
-		<div class=feature-info-right'>
-		<div class='comma-space serif small-text-2'>
-		paperText +"
-		</div>
-		</div>
-		</a>"
+	return "<a href='/papers/"+slug+"' class='help-category-card w-inline-block'><div class='_48'><img src='https://global-uploads.webflow.com/5df525c935688c0af50a9c57/5dfa8621f8d0d37b310dbb11_NoteIcon.png' alt=''></div><div class=feature-info-right'><div class='comma-space serif small-text-2'>"+paperText+"</div></div></a>"
 	;
 }
 
@@ -40,18 +29,7 @@ function getLinkFromTacticText(tacticText) {
 	var slug = tacticText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
 			.replace(/ /g, "-")
 			.toLowerCase();
-	return "<a href='/tactics/"
-		+slug+
-		"' class='help-category-card product-card tactic-card w-inline-block'>
-		<div class='feature-icon-left _48'>
-		<img src='https://global-uploads.webflow.com/5df525c935688c0af50a9c57/5e16948ccb9d510239dd0ed8_tbi-mark-dark%403x.png' alt='' class='image-8'>
-		</div>
-		<div class='feature-info-right'>
-		<div class='comma-space product-name tactic-name'>"
-		+tacticText+
-		"</div>
-		</div>
-		</a>"
+	return "<div class='w-dyn-item w-col w-col-3'><a href='/tactics/'"+slug+"' class='help-category-card vertical w-inline-block'><img src='https://global-uploads.webflow.com/5df525c935688c0af50a9c57/5e16948ccb9d510239dd0ed8_tbi-mark-dark%403x.png' width='42' alt='' class='image-7'><h5 class='heading-17'>"+tacticText+"</h5><div class='text-small-2 splitter w-condition-invisible'><span style='display: none;'>Products Go Here</span></div><div class='text-small-2 splitter'><span style='display: none;'>Papers Go Here</span></div></a></div>"
 	;
 }
 
