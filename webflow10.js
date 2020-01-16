@@ -14,7 +14,7 @@ function getLinkFromPaperText(paperText) {
 	var slug = paperText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
 			.replace(/ /g, "-")
 			.toLowerCase();
-	return "<a href='/papers/"+slug+"' class='margin-bottom help-category-card w-inline-block'><div class='_48'><img src='https://global-uploads.webflow.com/5df525c935688c0af50a9c57/5dfa8621f8d0d37b310dbb11_NoteIcon.png' alt=''></div><div class=feature-info-right'><div class='comma-space serif small-text-2'>"+paperText+"</div></div></a>"
+	return "<a href='/papers/"+slug+"' style='margin-left: 16px; margin-top: 4px;' class='margin-bottom help-category-card w-inline-block'><div class='_48'><img src='https://global-uploads.webflow.com/5df525c935688c0af50a9c57/5dfa8621f8d0d37b310dbb11_NoteIcon.png' alt=''></div><div class=feature-info-right'><div class='comma-space serif small-text-2'>"+paperText+"</div></div></a>"
 	;
 }
 
