@@ -40,7 +40,19 @@ function getLinkFromTacticText(tacticText) {
 	var slug = tacticText.replace(/[!\"#$%&'\(\)\*\+\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '')
 			.replace(/ /g, "-")
 			.toLowerCase();
-	return "<a class='sidebar-tag-link blue big-tag' href='/tactics/" + slug + "'>" + tacticText + "</a>";
+	return "<a href='/tactics/"
+		+slug+
+		"' class='help-category-card product-card tactic-card w-inline-block'>
+		<div class='feature-icon-left _48'>
+		<img src='https://global-uploads.webflow.com/5df525c935688c0af50a9c57/5e16948ccb9d510239dd0ed8_tbi-mark-dark%403x.png' alt='' class='image-8'>
+		</div>
+		<div class='feature-info-right'>
+		<div class='comma-space product-name tactic-name'>"
+		+tacticText+
+		"</div>
+		</div>
+		</a>"
+	;
 }
 
 
